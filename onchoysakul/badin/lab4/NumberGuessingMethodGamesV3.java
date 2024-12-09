@@ -160,6 +160,7 @@ public class NumberGuessingMethodGamesV3{
         }
     }
 }
+
     static void status(){
         System.out.println("==== All Game Stats ====");
         System.out.println("Total games played: " + round);

@@ -53,41 +53,42 @@ public class MatrixOperations {
             System.out.println("\nCreated Matrix:");
             displayMatrix(matrix);
  
- 
+            
             // Operations menu loop
-            //boolean continueOperations = true;
-            //while (continueOperations) {
-            //    displayOperationsMenu();
-            //    int operation = scanner.nextInt();
- //
- //
-            //    switch (operation) {
-            //        case 1:
-            //            transposeMatrix();
-            //            break;
-            //        case 2:
-            //            calculateSums();
-            //            break;
-            //        case 3:
-            //            findMinMax();
-            //            break;
-            //        case 4:
-            //            displayDiagonal();
-            //            break;
-            //        case 5:
-            //            continueOperations = false;
-            //            continueProgram = false;
-            //            break;
-            //        default:
-            //            System.out.println("Invalid operation choice.");
-            //    }
-            //}
+            boolean continueOperations = true;
+            while (continueOperations) {
+                displayOperationsMenu();
+                System.out.print("Enter your choice: ");
+                int operation = scanner.nextInt();
+ 
+ 
+                switch (operation) {
+                    case 1:
+                        transposeMatrix(matrix);
+                        break;
+                    case 2:
+                        calculateSums(matrix);
+                        break;
+                    case 3:
+                        findMinMax(matrix);
+                        break;
+                    case 4:
+                        displayDiagonal(matrix);
+                        break;
+                    case 5:
+                        continueOperations = false;
+                        continueProgram = false;
+                        break;
+                    default:
+                        System.out.println("Invalid operation choice.");
+                }
+            }
         }
         scanner.close();
     }
     //just create menu
     public static void displayCreationMenu(){
-        System.out.println("Maxtrix Creation Menu:" + 
+        System.out.println("\nMaxtrix Creation Menu:" + 
                             "\n1. User Input Matrix"+
                             "\n2. Random Matrix (0-9)"+
                             "\n3. All zeros Matrix" +
@@ -163,5 +164,75 @@ public class MatrixOperations {
             }
             System.out.println();
         }
+    }
+    // Part2: Operate
+    //operation menu
+    public static void displayOperationsMenu(){
+        System.out.println("\nMaxtrix Operations Menu:" + 
+                            "\n1. Find transpose of the Matrix"+
+                            "\n2. Calculate Sum of Row and Columns"+
+                            "\n3. Find the Minimum and Maximum Elements" +
+                            "\n4. Display Diagonal Elements" +
+                            "\n5. Exit");
+    }
+    // swap row and column
+    public static void transposeMatrix(int[][] matrix){
+    
+        int[][] matrixT = new int[matrix[0].length][matrix.length];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                matrixT[j][i] = matrix[i][j];
+            }
+        }
+        System.out.println("\nTransposed Matrix:");
+        displayMatrix(matrixT);
+    }
+    // sum += elements
+    public static void calculateSums(int[][] matrix){
+        System.out.println("\nRow sum:");
+        for (int i = 0; i < matrix.length; i++) {
+            int sumrow = 0; //reset row
+            for (int j = 0; j < matrix[i].length; j++) {
+                sumrow += matrix[i][j];
+            }
+            System.out.println("Row " + (i+1) + " sum: " + sumrow);
+        }
+
+        System.out.println("\nColumn sums:");
+        for (int i = 0; i < matrix[0].length; i++) { 
+            int sumcolumn = 0; // Reset column
+            for (int j = 0; j < matrix.length; j++) { 
+                sumcolumn += matrix[j][i];
+            }
+            System.out.println("Column " + (i + 1) + " sum: " + sumcolumn);
+        }
+    }
+    //add min and max value
+    public static void findMinMax(int[][] matrix){
+        int min = matrix[0][0];
+        int max = matrix[0][0];
+        for (int[] row : matrix) {
+            for (int element : row) {
+                if (element < min){
+                    min = element;
+                }    
+                if (element > max){
+                    max = element;
+                }
+            }
+        }
+        System.out.println("\nMinimum element: " + min);
+        System.out.println("Maximum element: " + max);
+    }
+    public static void displayDiagonal(int[][] matrix){
+        //row != column
+        if (matrix.length != matrix[0].length) { 
+            System.out.println("\nMatrix is not square, Cannot display diagonal elemetns.");
+            return;
+        }
+        for (int i = 0; i < matrix.length; i++) {
+            System.out.print(matrix[i][i] + " ");
+        }
+        System.out.println();
     }
 }

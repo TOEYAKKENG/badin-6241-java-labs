@@ -1,3 +1,4 @@
+package onchoysakul.badin.lab5;
 import java.util.*;
 public class MatrixOperations {
     private static int[][] matrix;

@@ -1,4 +1,4 @@
-
+package onchoysakul.badin.lab5;
 /**
  * A utility class that provides methods for analyzing arrays of numbers.
  * @author [your name]
@@ -71,6 +71,6 @@ public class NumberAnalyzer {
 		for(int i:arr){
 			System.out.print(i+ " ");
 		}
-		System.out.println("\nnumber is sorted: "+isSorted(arr));
+		System.out.println("\nnumber1 is sorted: "+isSorted(arr));
 	}
 }

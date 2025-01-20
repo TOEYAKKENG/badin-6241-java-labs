@@ -1,3 +1,4 @@
+package onchoysakul.badin.lab6;
 import java.util.*;
 
 class GuessGame {
@@ -132,5 +133,6 @@ public class NumberGuessingOOPGame{
         NumberGuessingOOPGame program = new NumberGuessingOOPGame();
         program.configure();
         program.playGames();
+        scanner.close();
     }
 }

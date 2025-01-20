@@ -1,4 +1,4 @@
-//package onchoysakul.badin.lab4;
+package onchoysakul.badin.lab4;
 import java.util.*;
     
     public class NumberGuessingMethodGames{ 
@@ -44,7 +44,7 @@ import java.util.*;
     
     static void playGame(){
         int tried = 0;
-        getAnswer();
+        genAnswer();
         System.out.println("Welcome to a number guessing game!");
 
         while (tried < maxtried) {
@@ -84,7 +84,7 @@ import java.util.*;
             }
         }
     }
-    static void getAnswer(){
+    static void genAnswer(){
         Random random = new Random();
         n = random.nextInt(min,max);
     }

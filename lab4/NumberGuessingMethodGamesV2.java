@@ -15,8 +15,6 @@ public class NumberGuessingMethodGamesV2{
     }
 
     static void configure(){
-        Random random = new Random();
-
         //get min max tries
         System.out.print("Enter the min value:");
         min = scanner.nextInt();
@@ -48,7 +46,7 @@ public class NumberGuessingMethodGamesV2{
         //clear data
         log.clear();
         int tried = 0;
-        getAnswer();
+        genAnswer();
         System.out.println("Welcome to a number guessing game!");
 
         while (tried < maxtried) {
@@ -93,9 +91,11 @@ public class NumberGuessingMethodGamesV2{
         logGuess();
 
     }
-    static void getAnswer(){
-        Random random = new Random();
-        n = random.nextInt(min,max);
+    static void genAnswer(){
+        Random r = new Random();
+        r.nextInt(min, n);
+
+        n = min + (int)(Math.random() * ((max - min) + 1));
     }
     
     static void playGames(){

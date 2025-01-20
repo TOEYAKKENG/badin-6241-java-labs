@@ -23,7 +23,6 @@ public class NumberGuessingMethodGamesV3{
     }
 
     static void configure(){
-        Random random = new Random();
 
         //get min max tries
         System.out.print("Enter the min value:");
@@ -58,7 +57,7 @@ public class NumberGuessingMethodGamesV3{
         log.clear(); // clear data log
         win = false; // reset win
         int tried = 0;
-        getAnswer();
+        genAnswer();
         System.out.println("Welcome to a number guessing game!");
 
         while (tried < maxtried) {
@@ -113,9 +112,8 @@ public class NumberGuessingMethodGamesV3{
         gameLog();
 
     }
-    static void getAnswer(){
-        Random random = new Random();
-        n = random.nextInt(min,max);
+    static void genAnswer(){
+        n = min + (int)(Math.random() * ((max - min) + 1));
     }
     
     static void playGames(){

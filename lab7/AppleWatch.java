@@ -1,5 +1,5 @@
 public class AppleWatch extends MobileDevice {
-    private String modelName;
+    protected String modelName;
     
     public AppleWatch(String color, double price, String modelName){
         this.color = color;

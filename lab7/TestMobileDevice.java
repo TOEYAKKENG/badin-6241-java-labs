@@ -1,3 +1,4 @@
+package onchoysakul.badin.lab7;
 public class TestMobileDevice {
     public static void main(String[] args) {
         IPadAir ipadAir1 = new IPadAir("Rose Gold", 19900.0,64);

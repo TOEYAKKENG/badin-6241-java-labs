@@ -1,3 +1,4 @@
+package onchoysakul.badin.lab7;
 public class IPadAir extends MobileDevice{
     private double storage;
     private static String CHIP_NAME = "Apple M2";

@@ -1,3 +1,4 @@
+package onchoysakul.badin.lab7;
 public class AppleWatchNike extends AppleWatch implements RunnerStatsCollector, HealthMonitorer {
     private double pace;
     private double totalDistance;
@@ -22,7 +23,7 @@ public class AppleWatchNike extends AppleWatch implements RunnerStatsCollector, 
     }
 
     public void displayHeartRates(){
-        System.out.println("Average heart rate: " + avgHeartRate + " bpm");
+        System.out.println(String.format("Average heart rate: %.0f bpm", avgHeartRate));
     }
     //put format
     public void displaySleepHours(){
@@ -31,7 +32,7 @@ public class AppleWatchNike extends AppleWatch implements RunnerStatsCollector, 
 
     @Override
     public String toString(){
-        return "AppleWatchNike(color:" + color + ", price:" + price + ", model name:" + modelName + " distance:" + totalDistance + "km" + "]";
+        return "AppleWatchNike(color: " + color + " price:" + price + " model name:" + modelName + " distance:" + totalDistance + " km" + "]";
     }
 
 }

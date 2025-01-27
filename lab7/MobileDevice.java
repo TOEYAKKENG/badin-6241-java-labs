@@ -1,3 +1,4 @@
+package onchoysakul.badin.lab7;
 abstract class MobileDevice {
     protected String color;
     protected double price;

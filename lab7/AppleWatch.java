@@ -1,3 +1,4 @@
+package onchoysakul.badin.lab7;
 public class AppleWatch extends MobileDevice {
     protected String modelName;
     

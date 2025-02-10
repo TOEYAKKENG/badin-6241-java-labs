@@ -76,7 +76,7 @@ public class MobileDeviceV3 extends MobileDeviceV2 {
         });
     }
     @Override
-    protected void addComponents(){
+    public void addComponents(){
         super.addComponents();
         menuBar.add(fileMenu);
         menuBar.add(configMenu);

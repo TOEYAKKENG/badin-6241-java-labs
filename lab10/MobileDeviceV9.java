@@ -6,7 +6,7 @@ import javax.swing.*;
 import java.io.*;
 
 public class MobileDeviceV9 extends MobileDeviceV8 implements ActionListener {
-    
+    protected JFileChooser fileChooser = new JFileChooser();    
     public MobileDeviceV9(String title){
         super(title);
     }
@@ -68,7 +68,6 @@ public class MobileDeviceV9 extends MobileDeviceV8 implements ActionListener {
         }
         // Saves data to a file and displays a success message using JFilechooser
         else if (srcObject == saveMI){
-            JFileChooser fileChooser = new JFileChooser();
             int returnValue = fileChooser.showSaveDialog(this);
             if (returnValue == JFileChooser.APPROVE_OPTION) {
                 File selectedFile = fileChooser.getSelectedFile();

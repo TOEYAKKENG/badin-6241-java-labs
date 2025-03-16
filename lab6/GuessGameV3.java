@@ -1,3 +1,4 @@
+package onchoysakul.badin.lab6;
 import java.util.*;
 public class GuessGameV3 extends GuessGameV2 {
     //initalize value

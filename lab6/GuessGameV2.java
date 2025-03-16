@@ -1,3 +1,4 @@
+package onchoysakul.badin.lab6;
 import java.util.Scanner;
 
 

@@ -23,10 +23,12 @@ class MySimpleWindow extends JFrame {
         buttonPanel.add(resetButton);
         buttonPanel.add(submitButton);
         mainPanel.add(buttonPanel);
-        
     }
     
     public void setFrameFeatures(){
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        Dimension halfScreenSize = new Dimension(screenSize.width / 2, screenSize.height / 2);
+        setPreferredSize(halfScreenSize);
         pack();
         this.add(mainPanel);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

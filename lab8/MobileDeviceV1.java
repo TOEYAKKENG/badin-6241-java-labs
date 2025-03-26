@@ -7,12 +7,12 @@ import javax.swing.event.*;
 public class MobileDeviceV1 extends MySimpleWindow {
  
     protected JButton okButton, cancelButton;
-    protected JPanel buttoPanel;
+    protected JPanel buttonPanel;
 
     protected JLabel deviceName, brand, price, type;
     protected JTextField inputDeviceName, inputBrand, inputPrice;
 
-    protected JRadioButton smartphonRadioButton, tabletRadioButton;
+    protected JRadioButton smartphoneRadioButton, tabletRadioButton;
     protected ButtonGroup radioGroup;
 
     protected JPanel formPanel;
@@ -24,12 +24,12 @@ public class MobileDeviceV1 extends MySimpleWindow {
         //button
         cancelButton = new JButton("Cancle");
         okButton = new JButton("OK");
-        buttoPanel = new JPanel();
-        buttoPanel.add(cancelButton);
-        buttoPanel.add(okButton);
+        buttonPanel = new JPanel();
+        buttonPanel.add(cancelButton);
+        buttonPanel.add(okButton);
         //add button to main panel
         mainPanel = new JPanel(new BorderLayout());
-        mainPanel.add(buttoPanel,BorderLayout.SOUTH);
+        mainPanel.add(buttonPanel,BorderLayout.SOUTH);
         
         //input labels
         deviceName = new JLabel("Device Name:");
@@ -41,7 +41,7 @@ public class MobileDeviceV1 extends MySimpleWindow {
         inputPrice = new JTextField(15);
         inputBrand = new JTextField(15);
         //radio buttons
-        smartphonRadioButton = new JRadioButton("Smartphon",true);
+        smartphoneRadioButton = new JRadioButton("Smartphone",true);
         tabletRadioButton = new JRadioButton("Tablet");
         radioGroup = new ButtonGroup();
     }
@@ -52,7 +52,7 @@ public class MobileDeviceV1 extends MySimpleWindow {
         formPanel = new JPanel(new GridLayout(4,2));
         typePanel = new JPanel();
     
-        radioGroup.add(smartphonRadioButton);
+        radioGroup.add(smartphoneRadioButton);
         radioGroup.add(tabletRadioButton);
         //add components to form panel
         formPanel.add(deviceName);
@@ -63,13 +63,13 @@ public class MobileDeviceV1 extends MySimpleWindow {
         formPanel.add(inputPrice);
         formPanel.add(type);
 
-        typePanel.add(smartphonRadioButton);
+        typePanel.add(smartphoneRadioButton);
         typePanel.add(tabletRadioButton);
 
         formPanel.add(typePanel);
         //add form panel to main panel
         mainPanel.add(formPanel,BorderLayout.NORTH);
-
+        
     }
 
 

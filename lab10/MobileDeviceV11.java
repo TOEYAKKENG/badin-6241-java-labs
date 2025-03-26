@@ -34,7 +34,7 @@ public class MobileDeviceV11 extends MobileDeviceV10 {
     }
     public void addListeners(){
         super.addListeners();
-        smartphonRadioButton.addActionListener(this); // Listener for radio button selection
+        smartphoneRadioButton.addActionListener(this); // Listener for radio button selection
         tabletRadioButton.addActionListener(this); // Listener for radio button selection
     }
 
@@ -42,7 +42,7 @@ public class MobileDeviceV11 extends MobileDeviceV10 {
     public void actionPerformed(ActionEvent e){
         super.actionPerformed(e);
         Object srcObject = e.getSource();
-        if (srcObject == smartphonRadioButton) { 
+        if (srcObject == smartphoneRadioButton) { 
             JOptionPane.showMessageDialog(this, "Smartphone is selected" , "Message", JOptionPane.INFORMATION_MESSAGE);
         }
         else if(srcObject == tabletRadioButton){

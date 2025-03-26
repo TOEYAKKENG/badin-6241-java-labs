@@ -5,7 +5,6 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.event.*;
-
 public class MobileDeviceV4 extends MobileDeviceV3 {
     
     //set title
@@ -24,6 +23,7 @@ public class MobileDeviceV4 extends MobileDeviceV3 {
    
     public void addMenus(){
         //set Icon
+        newMI.setIcon(new ImageIcon(getClass().getClassLoader().getResource("./onchoysakul/badin/lab9/images/new_icon.png")));  
         openMI.setIcon(new ImageIcon(getClass().getClassLoader().getResource("./onchoysakul/badin/lab9/images/open_icon.png")));
         saveMI.setIcon(new ImageIcon(getClass().getClassLoader().getResource("./onchoysakul/badin/lab9/images/save_icon.png")));
         exitMI.setIcon(new ImageIcon(getClass().getClassLoader().getResource("./onchoysakul/badin/lab9/images/exit_icon.png")));

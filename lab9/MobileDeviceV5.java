@@ -18,7 +18,7 @@ public class MobileDeviceV5 extends MobileDeviceV4 {
 
     }
     @Override
-    protected void addComponents(){
+    public void addComponents(){
         super.addComponents();
         
         

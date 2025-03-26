@@ -28,14 +28,14 @@ public class MobileDeviceV7 extends MobileDeviceV6 {
         inputPrice.setText("46,900");
 
         //prefill the feature
-        featuresArea.setText("""
-            -200MP Camera
-            -1TB Storage
-            -Snapdragon Gen 4 Processor
-            -5000mAh Battery
-            -6.8-inch AMOLED Display
-            -120Hz Refresh Rate
-            -Fast Charging
+        featuresArea.setText(""" 
+        - 200MP Camera
+            - 1TB Storage
+            - Snapdragon Gen 4 Processor
+            - 5000mAh Battery
+            - 6.8-inch AMOLED Display
+            - 120Hz Refresh Rate
+            - 5000mAh Battery with Fast Charging
         """);
         
         //preselect AIS

@@ -9,6 +9,7 @@ public class MobileDeviceV12 extends MobileDeviceV11  {
         super(title);
     }
     //get name from text field
+    @Override
     public void addComponents(){
         super.addComponents();
         inputDeviceName.setName( "Device Name");
@@ -32,7 +33,7 @@ public class MobileDeviceV12 extends MobileDeviceV11  {
         } else if (srcObject == inputBrand) {
             handleNormalTextField(inputBrand, inputPrice);
         } else if (srcObject == inputPrice) {
-            handlePosNumTextField(inputPrice, smartphonRadioButton);
+            handlePosNumTextField(inputPrice, smartphoneRadioButton);
         }
    }
     //handle text field
@@ -87,6 +88,7 @@ public class MobileDeviceV12 extends MobileDeviceV11  {
         mdv12.addMenus();
         mdv12.addListeners();
         mdv12.setFrameFeatures();
+        
     }
 }
 

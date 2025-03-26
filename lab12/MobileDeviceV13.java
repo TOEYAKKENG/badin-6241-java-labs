@@ -18,14 +18,15 @@ public class MobileDeviceV13 extends MobileDeviceV12  {
         super(title);
     }
     //get name from text field
+    @Override
     public void addComponents(){
         super.addComponents();
         //add new 2 buttons
         addButton = new JButton("Add");
         displayButton = new JButton("Display");
         //add buttons to panel
-        buttoPanel.add(addButton);
-        buttoPanel.add(displayButton);
+        buttonPanel.add(addButton);
+        buttonPanel.add(displayButton);
         //add color to button
         addButton.setBackground(newbuttonBGColor);
         displayButton.setBackground(newbuttonBGColor);
@@ -60,7 +61,7 @@ public class MobileDeviceV13 extends MobileDeviceV12  {
             double price = Double.parseDouble(priceText); // Now it won't throw an error
 
             // Check which radio button is selected
-            if (smartphonRadioButton.isSelected()) {
+            if (smartphoneRadioButton.isSelected()) {
                 devicesList.add(new SmartPhone(name, brand, price)); // Add a new SmartPhone object to the list
                 JOptionPane.showMessageDialog(null, "SmartPhone " + name + " is added", "Message", JOptionPane.INFORMATION_MESSAGE);
             } else if (tabletRadioButton.isSelected()) {

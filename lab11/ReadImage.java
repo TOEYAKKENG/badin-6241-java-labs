@@ -12,8 +12,29 @@ public class ReadImage extends JPanel {
     
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawImage(img, 0, 0, this);
+    
+        int panelWidth = this.getWidth();
+        int panelHeight = this.getHeight();
+        int imageWidth = img.getWidth(this);
+        int imageHeight = img.getHeight(this);
+    
+        // Calculate scaling factor to fit image
+        double widthScale = (double) panelWidth / imageWidth;
+        double heightScale = (double) panelHeight / imageHeight;
+        double scale = Math.min(widthScale, heightScale);
+    
+        // Calculate new width and height
+        int newWidth = (int) (imageWidth * scale);
+        int newHeight = (int) (imageHeight * scale);
+    
+        // Calculate top-left corner position for centering
+        int x = (panelWidth - newWidth) / 2;
+        int y = (panelHeight - newHeight) / 2;
+    
+        // Draw the scaled image centered
+        g.drawImage(img, x, y, newWidth, newHeight, this);
     }
+    
 
     public ReadImage() {
         try {

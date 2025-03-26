@@ -2,9 +2,7 @@ package onchoysakul.badin.lab11;
 
 import javax.swing.*;
 import javax.swing.border.Border;
-
 import java.awt.*;
-
 public class MobileDeviceComplete extends JFrame{
     
     protected JTextField deviceNameField, brandField, priceField;
